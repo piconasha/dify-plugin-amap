@@ -1,0 +1,37 @@
+identity:
+  name: "direction_v2-walking"
+  author: "Piconasha"
+  label:
+    en_US: "Walking Route Plan V2"
+    zh_Hans: "步行路线规划 2.0"
+description:
+  human:
+    en_US: "Get a walking route plan from start to end."
+    zh_Hans: "根据起终点坐标检索符合条件的步行路线规划方案。"
+  llm: "Get a walking route plan from start to end."
+parameters:
+  - name: starting_point
+    type: string
+    form: llm
+    required: true
+    label:
+      en_US: Starting Point (Longitude,Latitude)
+      zh_Hans: 出发地（经纬度坐标，英文逗号分隔）
+    human_description:
+      en_US: "The starting point for the user's walking plan"
+      zh_Hans: "用户开始步行规划的出发地"
+    llm_description: "The latitude and longitude coordinates of the starting point, in the following format: 123.456789,45.678900"
+  - name: ending_point
+    type: string
+    form: llm
+    required: true
+    label:
+      en_US: Ending Point (Longitude,Latitude)
+      zh_Hans: 目的地（经纬度坐标，英文逗号分隔）
+    human_description:
+      en_US: "The ending point for the user's walking plan"
+      zh_Hans: "用户开始步行规划的目的地"
+    llm_description: "The latitude and longitude coordinates of the ending point, in the following format: 123.456789,45.678900"
+extra:
+  python:
+    source: tools/direction_v2/walking.py

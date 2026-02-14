@@ -1,0 +1,26 @@
+identity:
+  name: "ip-query"
+  author: "Piconasha"
+  label:
+    en_US: "IP Location Query"
+    zh_Hans: "IP归属地查询"
+description:
+  human:
+    en_US: "Get IPv4 address belonging(China Only)."
+    zh_Hans: "定位IP的所在位置（仅限中国境内）。"
+  llm: "Get IPv4 address belonging(China Only)."
+parameters:
+  - name: ipv4_address
+    type: string
+    form: llm
+    required: false
+    label:
+      en_US: IPv4 Address
+      zh_Hans: IPv4地址
+    human_description:
+      en_US: "IPv4 Address, Format x.x.x.x"
+      zh_Hans: "IPv4地址，格式x.x.x.x"
+    llm_description: "IPv4 address"
+extra:
+  python:
+    source: tools/ip/query.py

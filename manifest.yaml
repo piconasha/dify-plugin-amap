@@ -1,0 +1,33 @@
+version: 0.0.1
+type: plugin
+author: piconasha
+name: amap
+label:
+  en_US: amap
+  zh_Hans: 高德开放平台
+description:
+  en_US: Connect Amap Open Platform, using API key.
+  zh_Hans: 通过API-Key连接高德开放平台，调用API。
+icon: icon.svg
+icon_dark: icon-dark.svg
+resource:
+  memory: 268435456
+  permission:
+    tool:
+      enabled: true
+plugins:
+  tools:
+    - provider/amap.yaml
+meta:
+  version: 0.0.1
+  arch:
+    - amd64
+    - arm64
+  runner:
+    language: python
+    version: "3.12"
+    entrypoint: main
+  minimum_dify_version: null
+created_at: 2026-02-14T23:37:08.476231105+08:00
+privacy: PRIVACY.md
+verified: false

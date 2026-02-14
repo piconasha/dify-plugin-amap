@@ -1,0 +1,34 @@
+identity:
+  author: Piconasha
+  name: amap
+  label:
+    en_US: amap
+    zh_Hans: 高德开放平台
+  description:
+    en_US: Connect Amap Open Platform, using API key.
+    zh_Hans: 通过API-Key连接高德开放平台，调用API。
+  icon: icon.svg
+  tags:
+    - travel
+
+credentials_for_provider:
+  api_key:
+    type: secret-input
+    required: true
+    label:
+      en_US: API Key
+      zh_Hans: API Key
+    placeholder:
+      en_US: Please input your API key
+      zh_Hans: 请输入您的API-key
+    help:
+      en_US: Get your API key from Amap Open Platform
+      zh_Hans: 获取高德开放平台的API-Key
+    url: https://lbs.amap.com/api
+
+tools:
+  - tools/direction_v2/walking.yaml
+  - tools/ip/query.yaml
+extra:
+  python:
+    source: provider/amap.py
