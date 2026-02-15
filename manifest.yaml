@@ -3,11 +3,11 @@ type: plugin
 author: piconasha
 name: amap
 label:
-  en_US: amap
+  en_US: Amap
   zh_Hans: 高德开放平台
 description:
-  en_US: Connect Amap Open Platform, using API key.
-  zh_Hans: 通过API-Key连接高德开放平台，调用API。
+  en_US: Connect to Amap Open Platform for IP geolocation queries and walking route planning.
+  zh_Hans: 连接高德开放平台，提供IP归属地查询和步行路线规划功能。
 icon: icon.svg
 icon_dark: icon-dark.svg
 resource:
@@ -27,7 +27,7 @@ meta:
     language: python
     version: "3.12"
     entrypoint: main
-  minimum_dify_version: null
-created_at: 2026-02-14T23:37:08.476231105+08:00
+  minimum_dify_version: 0.15.0
+created_at: 2026-02-14T15:37:08.476231105+08:00
 privacy: PRIVACY.md
 verified: false

@@ -27,7 +27,7 @@ class DirectionV2Walking(Tool):
         response.raise_for_status()
         result = self.generate_route_result(response.json())
 
-        output = f"步行距离：{result['distance']}米\n\n路线指引：\n"
+        output = f"Distance:{result['distance']}m\n\nRoutine:\n"
         for i, step in enumerate(result["steps"], 1):
             output += f"{i}. {step}\n"
         yield self.create_text_message(output)

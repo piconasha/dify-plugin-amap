@@ -2,25 +2,25 @@ identity:
   name: "ip-query"
   author: "Piconasha"
   label:
-    en_US: "IP Location Query"
+    en_US: "IP Geolocation Query"
     zh_Hans: "IP归属地查询"
 description:
   human:
-    en_US: "Get IPv4 address belonging(China Only)."
-    zh_Hans: "定位IP的所在位置（仅限中国境内）。"
-  llm: "Get IPv4 address belonging(China Only)."
+    en_US: "Query the geographical location of an IPv4 address (China only)."
+    zh_Hans: "查询IPv4地址的地理位置（仅限中国境内）。"
+  llm: "Query the geographical location of an IPv4 address within China."
 parameters:
   - name: ipv4_address
     type: string
     form: llm
     required: false
     label:
-      en_US: IPv4 Address
-      zh_Hans: IPv4地址
+      en_US: "IPv4 Address"
+      zh_Hans: "IPv4地址"
     human_description:
-      en_US: "IPv4 Address, Format x.x.x.x"
-      zh_Hans: "IPv4地址，格式x.x.x.x"
-    llm_description: "IPv4 address"
+      en_US: "IPv4 address in format x.x.x.x (e.g., 114.114.114.114). Leave empty to query requester's IP."
+      zh_Hans: "IPv4地址，格式为 x.x.x.x（如：114.114.114.114）。留空则查询请求者IP。"
+    llm_description: "IPv4 address in format x.x.x.x (optional, e.g., 114.114.114.114). Leave empty to query the requester's location."
 extra:
   python:
     source: tools/ip/query.py

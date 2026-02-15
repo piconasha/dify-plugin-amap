@@ -2,14 +2,15 @@ identity:
   author: Piconasha
   name: amap
   label:
-    en_US: amap
+    en_US: Amap
     zh_Hans: 高德开放平台
   description:
-    en_US: Connect Amap Open Platform, using API key.
-    zh_Hans: 通过API-Key连接高德开放平台，调用API。
+    en_US: Connect to Amap Open Platform for IP geolocation queries and walking route planning.
+    zh_Hans: 连接高德开放平台，提供IP归属地查询和步行路线规划功能。
   icon: icon.svg
   tags:
     - travel
+    - utilities
 
 credentials_for_provider:
   api_key:
@@ -19,16 +20,17 @@ credentials_for_provider:
       en_US: API Key
       zh_Hans: API Key
     placeholder:
-      en_US: Please input your API key
-      zh_Hans: 请输入您的API-key
+      en_US: Please enter your Amap API key
+      zh_Hans: 请输入您的高德 API Key
     help:
-      en_US: Get your API key from Amap Open Platform
-      zh_Hans: 获取高德开放平台的API-Key
-    url: https://lbs.amap.com/api
+      en_US: Get your API key from Amap Open Platform console
+      zh_Hans: 从高德开放平台控制台获取您的 API Key
+    url: https://console.amap.com/dev/key/app
 
 tools:
   - tools/direction_v2/walking.yaml
   - tools/ip/query.yaml
+
 extra:
   python:
     source: provider/amap.py

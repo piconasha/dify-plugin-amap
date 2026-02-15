@@ -2,36 +2,36 @@ identity:
   name: "direction_v2-walking"
   author: "Piconasha"
   label:
-    en_US: "Walking Route Plan V2"
-    zh_Hans: "步行路线规划 2.0"
+    en_US: "Walking Route Planning V2"
+    zh_Hans: "步行路线规划 V2"
 description:
   human:
-    en_US: "Get a walking route plan from start to end."
-    zh_Hans: "根据起终点坐标检索符合条件的步行路线规划方案。"
-  llm: "Get a walking route plan from start to end."
+    en_US: "Plan a walking route between two coordinate points."
+    zh_Hans: "根据起终点坐标规划步行路线。"
+  llm: "Plan a walking route between two coordinate points."
 parameters:
   - name: starting_point
     type: string
     form: llm
     required: true
     label:
-      en_US: Starting Point (Longitude,Latitude)
-      zh_Hans: 出发地（经纬度坐标，英文逗号分隔）
+      en_US: "Starting Point"
+      zh_Hans: "起点"
     human_description:
-      en_US: "The starting point for the user's walking plan"
-      zh_Hans: "用户开始步行规划的出发地"
-    llm_description: "The latitude and longitude coordinates of the starting point, in the following format: 123.456789,45.678900"
+      en_US: "The starting point coordinates (longitude,latitude), e.g., 116.397428,39.90923"
+      zh_Hans: "起点坐标（经度,纬度），如：116.397428,39.90923"
+    llm_description: "The starting point coordinates in format: longitude,latitude (e.g., 116.397428,39.90923)"
   - name: ending_point
     type: string
     form: llm
     required: true
     label:
-      en_US: Ending Point (Longitude,Latitude)
-      zh_Hans: 目的地（经纬度坐标，英文逗号分隔）
+      en_US: "Destination"
+      zh_Hans: "终点"
     human_description:
-      en_US: "The ending point for the user's walking plan"
-      zh_Hans: "用户开始步行规划的目的地"
-    llm_description: "The latitude and longitude coordinates of the ending point, in the following format: 123.456789,45.678900"
+      en_US: "The destination coordinates (longitude,latitude), e.g., 116.481028,39.989643"
+      zh_Hans: "终点坐标（经度,纬度），如：116.481028,39.989643"
+    llm_description: "The destination coordinates in format: longitude,latitude (e.g., 116.481028,39.989643)"
 extra:
   python:
     source: tools/direction_v2/walking.py
